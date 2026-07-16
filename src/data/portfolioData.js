@@ -19,7 +19,7 @@ export const softwarePortfolio = {
       { title: "Education", body: "B.E. Electronics & Communication Engineering\nCGPA: 9.13" },
       { title: "Projects", body: "5 Software Projects\nFull Stack • AI • IoT" },
       { title: "Achievements", body: "Winner of 10+ Intercollege Technical Events" },
-      { title: "Leadership", body: "Designer, TEDc MIT\nVolunteer, NSS" },
+      { title: "Leadership", body: "Head of Content and Event Team, PDA\n Designer, TEDc MIT\nVolunteer, NSS" },
     ],
   },
   whyHire: {
