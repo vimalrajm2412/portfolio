@@ -55,6 +55,4 @@ const server = http.createServer((req, res) => {
   });
 });
 
-server.listen(PORT, () => {
-  console.log(`Portfolio running at http://localhost:${PORT}`);
-});
+server.listen(PORT);
