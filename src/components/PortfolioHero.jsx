@@ -25,8 +25,8 @@ function formatVisitorName(name) {
 export function PortfolioHero({ data, visitorName }) {
   const cards = data.hero?.cards ?? [];
   const greeting = visitorName
-    ? `Hi ${formatVisitorName(visitorName)}, I'm Vimalraj 👋`
-    : "Hi, I'm Vimalraj 👋";
+    ? `Hi ${formatVisitorName(visitorName)}, `
+    : "Hi ";
 
   return (
     <motion.header

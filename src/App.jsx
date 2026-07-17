@@ -83,7 +83,7 @@ function WhyHireModal({ isOpen, onClose }) {
           >
             <div className="modal-head">
               <div>
-                <p className="eyebrow">Why Hire Vimalraj?</p>
+                <p className="eyebrow">Why Hire Me?</p>
                 <h2>Software engineer with product instincts, execution depth, and strong fundamentals.</h2>
               </div>
               <button type="button" className="icon-button" onClick={onClose} aria-label="Close modal">
@@ -205,146 +205,208 @@ export default function App() {
       <main className="page-shell">
         <PortfolioHero data={softwarePortfolio} visitorName={visitorName} />
 
-        <motion.div
-          className="content-grid"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.12 }}
-          transition={{ staggerChildren: 0.08 }}
-        >
-          <motion.div variants={sectionAnimation} className="wide-panel">
-            <SectionPanel kicker="About" title="Thoughtful software, built with clarity.">
-              <div className="about-grid">
-                <p className="about-intro">{softwarePortfolio.sections.about.description}</p>
-                <ul className="clean-list">
-                  {softwarePortfolio.sections.about.points.map((point) => (
-                    <li key={point}>{point}</li>
-                  ))}
-                </ul>
-              </div>
-            </SectionPanel>
-          </motion.div>
+        <div className="content-grid">
+  <motion.div
+    className="wide-panel"
+    variants={sectionAnimation}
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true, amount: 0.2 }}
+  >
+    <SectionPanel kicker="About" title="Thoughtful software, built with clarity.">
+      <div className="about-grid">
+        <p className="about-intro">{softwarePortfolio.sections.about.description}</p>
+        <ul className="clean-list">
+          {softwarePortfolio.sections.about.points.map((point) => (
+            <li key={point}>{point}</li>
+          ))}
+        </ul>
+      </div>
+    </SectionPanel>
+  </motion.div>
 
-          <motion.div variants={sectionAnimation}>
-            <SectionPanel kicker="Experience" title="Professional Experience">
-              <div className="stack-list">
-                {softwarePortfolio.experiences.map((entry) => (
-                  <EntryCard key={entry.title} entry={entry} variant="experience" />
-                ))}
-              </div>
-            </SectionPanel>
-          </motion.div>
+  <motion.div
+    variants={sectionAnimation}
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true, amount: 0.2 }}
+  >
+    <SectionPanel kicker=" " title="Professional Experience">
+      <div className="stack-list">
+        {softwarePortfolio.experiences.map((entry) => (
+          <EntryCard key={entry.title} entry={entry} variant="experience" />
+        ))}
+      </div>
+    </SectionPanel>
+  </motion.div>
 
-          <motion.div variants={sectionAnimation}>
-            <SectionPanel kicker="Projects" title="Featured Projects">
-              <div className="stack-list">
-                {softwarePortfolio.projects.map((entry) => (
-                  <EntryCard key={entry.title} entry={entry} variant="project" />
-                ))}
-              </div>
-            </SectionPanel>
-          </motion.div>
+  <motion.div
+    variants={sectionAnimation}
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true, amount: 0.2 }}
+  >
+    <SectionPanel kicker=" " title="Featured Projects">
+      <div className="stack-list">
+        {softwarePortfolio.projects.map((entry) => (
+          <EntryCard key={entry.title} entry={entry} variant="project" />
+        ))}
+      </div>
+    </SectionPanel>
+  </motion.div>
 
-          <motion.div variants={sectionAnimation}>
-            <SectionPanel kicker="Skills" title="Technical Skills">
-              <PillGroup title="Core Stack" items={softwarePortfolio.technicalSkills} />
-              <PillGroup title="Foundations" items={softwarePortfolio.softSkills} />
-              <PillGroup title="Focus Areas" items={softwarePortfolio.interests} />
-            </SectionPanel>
-          </motion.div>
+  <motion.div
+    variants={sectionAnimation}
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true, amount: 0.2 }}
+  >
+    <SectionPanel kicker=" " title="Technical Skills">
+      <PillGroup title="Core Stack" items={softwarePortfolio.technicalSkills} />
+      <PillGroup title="Foundations" items={softwarePortfolio.softSkills} />
+      <PillGroup title="Focus Areas" items={softwarePortfolio.interests} />
+    </SectionPanel>
+  </motion.div>
 
-          <motion.div variants={sectionAnimation}>
-            <SectionPanel kicker="Education" title="Academic Background">
-              <EducationLeadership
-                education={softwarePortfolio.education}
-                roles={[]}
-                educationTitle="Education"
-                rolesTitle=""
-              />
-            </SectionPanel>
-          </motion.div>
+  <motion.div
+    variants={sectionAnimation}
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true, amount: 0.2 }}
+  >
+    <SectionPanel title="Academic Background">
+      <EducationLeadership
+        education={softwarePortfolio.education}
+        roles={[]}
+        educationTitle="Education"
+        rolesTitle=""
+      />
+    </SectionPanel>
+  </motion.div>
 
-          <motion.div variants={sectionAnimation}>
-            <SectionPanel kicker="Leadership" title="Leadership & Positions of Responsibility">
-              <div className="info-card leadership-card">
-                <div className="card-head">
-                  <h3>Leadership</h3>
-                  <span className="card-pill">Leadership</span>
+  <motion.div
+    variants={sectionAnimation}
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true, amount: 0.2 }}
+  >
+    <SectionPanel title="Leadership & Positions of Responsibility">
+      <div className="info-card leadership-card">
+        <div className="card-head">
+          <h3>Leadership</h3>
+          <span className="card-pill">Leadership</span>
+        </div>
+
+        <div className="timeline-list">
+          {softwarePortfolio.leadership.map((item) => (
+            <div className="timeline-item" key={item.title}>
+              <span className="timeline-icon">{item.icon}</span>
+              <div className="timeline-content">
+                <div className="timeline-topline">
+                  <strong>{item.title}</strong>
+                  {item.year && <span className="year-badge">{item.year}</span>}
                 </div>
-                <div className="timeline-list">
-                  {softwarePortfolio.leadership.map((item) => (
-                    <div className="timeline-item" key={item.title}>
-                      <span className="timeline-icon">{item.icon}</span>
-                      <div className="timeline-content">
-                        <div className="timeline-topline">
-                          <strong>{item.title}</strong>
-                          {item.year ? <span className="year-badge">{item.year}</span> : null}
-                        </div>
-                        {item.subtitle ? <p>{item.subtitle}</p> : null}
-                      </div>
-                    </div>
-                  ))}
-                </div>
+                {item.subtitle && <p>{item.subtitle}</p>}
               </div>
-            </SectionPanel>
-          </motion.div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </SectionPanel>
+  </motion.div>
 
-          <motion.div variants={sectionAnimation}>
-            <SectionPanel kicker="Recognition" title="Recognition & Achievements">
-              <div className="info-card recognition-card">
-                <div className="card-head">
-                  <h3>Recognition</h3>
-                  <span className="card-pill">Recognition</span>
+  <motion.div
+    variants={sectionAnimation}
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true, amount: 0.2 }}
+  >
+    <SectionPanel title="Recognition & Achievements">
+      <div className="info-card recognition-card">
+        <div className="card-head">
+          <h3>Recognition</h3>
+          <span className="card-pill">Recognition</span>
+        </div>
+
+        <div className="timeline-list">
+          {softwarePortfolio.recognitions.map((item) => (
+            <div className="timeline-item" key={item.title}>
+              <span className="timeline-icon">{item.icon}</span>
+              <div className="timeline-content">
+                <div className="timeline-topline">
+                  <strong>{item.title}</strong>
+                  {item.year && <span className="year-badge">{item.year}</span>}
                 </div>
-                <div className="timeline-list">
-                  {softwarePortfolio.recognitions.map((item) => (
-                    <div className="timeline-item" key={item.title}>
-                      <span className="timeline-icon">{item.icon}</span>
-                      <div className="timeline-content">
-                        <div className="timeline-topline">
-                          <strong>{item.title}</strong>
-                          {item.year ? <span className="year-badge">{item.year}</span> : null}
-                        </div>
-                        {item.subtitle ? <p>{item.subtitle}</p> : null}
-                      </div>
-                    </div>
-                  ))}
-                </div>
+                {item.subtitle && <p>{item.subtitle}</p>}
               </div>
-            </SectionPanel>
-          </motion.div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </SectionPanel>
+  </motion.div>
 
-          <motion.div variants={sectionAnimation} className="wide-panel">
-            <SectionPanel kicker="Resume" title="Resume">
-              <ResumePreview resume={softwarePortfolio.identity.resume} />
-            </SectionPanel>
-          </motion.div>
+  <motion.div
+    className="wide-panel"
+    variants={sectionAnimation}
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true, amount: 0.2 }}
+  >
+    <SectionPanel title="Resume">
+      <ResumePreview resume={softwarePortfolio.identity.resume} />
+    </SectionPanel>
+  </motion.div>
 
-          <motion.div variants={sectionAnimation} className="wide-panel" id="contact">
-            <SectionPanel kicker="Contact" title="Let’s build something clear and useful.">
-              <div className="contact-panel">
-                <p>
-                  Always open to meaningful engineering conversations, technical collaborations and innovative product ideas.
-                </p>
-                <div className="contact-actions">
-                  <a className="primary-btn" href={`mailto:${softwarePortfolio.identity.email}`}>
-                    Email Me
-                  </a>
-                  <a className="secondary-btn" href={softwarePortfolio.identity.github} target="_blank" rel="noreferrer">
-                    GitHub
-                  </a>
-                  <a className="secondary-btn" href={softwarePortfolio.identity.linkedin} target="_blank" rel="noreferrer">
-                    LinkedIn
-                  </a>
-                </div>
-              </div>
-            </SectionPanel>
-          </motion.div>
-        </motion.div>
+  <motion.div
+    className="wide-panel"
+    id="contact"
+    variants={sectionAnimation}
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true, amount: 0.2 }}
+  >
+    <SectionPanel title="Let’s build something clear and useful.">
+      <div className="contact-panel">
+        <p>
+          Always open to meaningful engineering conversations,
+          technical collaborations and innovative product ideas.
+        </p>
+
+        <div className="contact-actions">
+          <a
+            className="primary-btn"
+            href={`mailto:${softwarePortfolio.identity.email}`}
+          >
+            Email Me
+          </a>
+
+          <a
+            className="secondary-btn"
+            href={softwarePortfolio.identity.github}
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+          </a>
+
+          <a
+            className="secondary-btn"
+            href={softwarePortfolio.identity.linkedin}
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </SectionPanel>
+  </motion.div>
+</div>
       </main>
 
       <button type="button" className="floating-hire-button" onClick={() => setWhyOpen(true)}>
-        Why Hire Vimalraj?
+        Why Hire Me?
       </button>
 
       <WhyHireModal isOpen={whyOpen} onClose={() => setWhyOpen(false)} />

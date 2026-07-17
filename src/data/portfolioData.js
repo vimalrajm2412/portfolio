@@ -5,7 +5,7 @@ export const softwarePortfolio = {
     github: "https://github.com/vimalrajm2412",
     linkedin: "https://www.linkedin.com/in/vimalrajm2412/",
     resume: "/assets/Vimalraj_M-Resume.pdf",
-    portrait: "/assets/Photo-Vimalraj-1.jpg",
+    portrait: "/assets/Photo-Vimalraj.jpg",
   },
   hero: {
     label: "SOFTWARE ENGINEER",
@@ -23,13 +23,13 @@ export const softwarePortfolio = {
     ],
   },
   whyHire: {
-    topHighlights: [
-      "Amazon SDE intern on Delphi listing workflows",
-      "React, TypeScript, Java APIs, Cypress, Flask, Python",
-      "Full-stack IoT and machine learning project experience",
-      "Winner across 7 intercollege technical events",
-      "Leadership in student organizations and campus initiatives",
-    ],
+  topHighlights: [
+    "Amazon Software Development Engineering Intern with hands-on product development experience",
+    "Strong full-stack development skills using React, TypeScript, Python, Flask and Java APIs",
+    "Built AI-powered and IoT-based software solutions with real-world applications",
+    "Winner of 10+ intercollege technical symposium events and multiple academic awards",
+    "Leadership experience as Head of Content Team, TEDc MIT Designer and NSS Volunteer"
+  ],
   },
   sections: {
     about: {
@@ -70,7 +70,7 @@ export const softwarePortfolio = {
   ],
   projects: [
     {
-      label: "Full-Stack IoT",
+      label: "Full-Stack IoT with Machine Learning and Deep Learning",
       title: "Beehive Monitoring Platform",
       meta: "Dec 2025 - Apr 2026 | Python, Flask, React, Machine Learning, Raspberry Pi",
       description:
@@ -123,9 +123,6 @@ export const softwarePortfolio = {
   ],
   interests: [
     "Full-stack engineering",
-    "Backend APIs",
-    "Frontend product development",
-    "Testing and quality",
     "Applied machine learning",
   ],
   education: {
